@@ -1,4 +1,6 @@
 <script>
+import { useStore } from "vuex";
+const store = useStore();
 export default {
   data(){
     return {
@@ -80,6 +82,7 @@ export default {
         } else {
             if (this.error == null)
             {
+                this.$store.commit('setOrderState', true)
                 this.$router.push({ name: 'Finish Order' });
             }
         }

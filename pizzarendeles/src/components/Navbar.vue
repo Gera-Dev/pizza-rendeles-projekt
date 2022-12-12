@@ -5,10 +5,16 @@ export default {
   setup() {
     const store = useStore();
     const cartItems = computed(() => store.state.cart.length);
+    const finished = computed(() => store.state.finished);
     watch(cartItems, () => {
         var totalPrice = computed(() => store.getters.totalPrice);
         document.getElementById('totalPrice').innerHTML = '('+ totalPrice.value + ' Ft)';
-      });
+    });
+    watch(finished, () => {
+        if (finished.value) {
+            document.getElementById('totalPrice').innerHTML = '(0 Ft)';
+        }
+    });
   },
 };
 </script>

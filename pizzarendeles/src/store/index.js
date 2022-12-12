@@ -16,6 +16,7 @@ export default createStore({
   ],
   cart: [],
   error: null,
+  finishedOrder: false
   },
   getters: {
     totalPrice(state) {
@@ -34,6 +35,9 @@ export default createStore({
     },
     setError(state, error) {
       state.error = error
+    },
+    setOrderState(state, stateOfOrder) {
+      state.finishedOrder = stateOfOrder
     }
   },
   actions: {
