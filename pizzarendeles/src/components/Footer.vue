@@ -1,0 +1,25 @@
+<template>
+    <footer class="bg-dark text-center text-white fixed-bottom">
+        <div class="container p-2 pb-0">
+        <section class="mb-2">
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+            ></a>
+    
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-twitter"></i
+            ></a>
+    
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-instagram"></i
+            ></a>
+        </section>
+        </div>
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 |
+        <a class="text-white" href="#" v-on:click="this.$router.push({name: 'Pizzas'})">KockaPizzéria - Pizzában az első</a>
+        </div>
+    </footer>
+</template>
+
